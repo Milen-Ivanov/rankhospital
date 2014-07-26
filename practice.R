@@ -18,13 +18,16 @@ best <- function(state, outcome) {
         
         a <- state[order(state[ ,c(colname[outcome])]), ]
         ## Sort the given column in the data frame
-        a
-
+        
+        hospital <- a[1, "Hospital.Name"]
+        
+        hospital
 }
 
-min(a[,11])
+b <- min(a[,11])
 ## Returns the minima of the 11th column in "a"
 
+a[1, "Hospital.Name"]
 ## Return hospital name in that state with lowest 30-day death
 ## rate
 
