@@ -1,11 +1,11 @@
 best <- function(state, outcome) {
         data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
         if(!state %in% data[ ,7]) {
-                message ("invalid state")
+                stop ("invalid state")
         }
         valid <- c("heart attack", "pneumonia", "heart failure")
         if(!outcome %in%  valid) {
-                message ("invalid outcome")
+                stop ("invalid outcome")
         }
         ## Check that state and outcome are valid
         
